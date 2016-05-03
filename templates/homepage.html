@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TODO</title>
+  <link rel="stylesheet" type="text/css" href="/static/homepage.css">
+</head>
+<body>
+  <div class="container">
+    <h1>TODO</h1>
+    <ul>
+      {% for task in tasks %}
+        <li class="todo-item">
+          {% if task.done %}
+            <del>{{task.name}}</del>
+          {% else %}
+            {{task.name}}
+          {% endif %}
+          <form method='post' action='/' style="display: inline">
+            <input type='hidden' name="id" value="{{task.id}}"/>
+            <button class="btn" stype="submit">Done</button>
+          </form>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>

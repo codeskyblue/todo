@@ -1,0 +1,15 @@
+/* css */
+
+.container {
+	margin: 8em;
+	font-family: 'Courier New';
+}
+
+li.todo-item {
+	font-size: 25px;
+}
+
+.btn {
+	height: 25px;
+	border: 1px gray;
+}
